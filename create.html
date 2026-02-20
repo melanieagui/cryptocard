@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoCard — Create Your Card</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav class="nav-bar container">
+    <a href="index.html" class="logo">CryptoCard</a>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <div class="create-layout container">
+    <div class="create-form">
+      <form id="profile-form" class="glass-card">
+        <h2 style="margin-bottom: 24px;">Your profile</h2>
+        <div class="form-group">
+          <label for="photo">Profile photo URL</label>
+          <input type="url" id="photo" name="photo" placeholder="https://..." />
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="bio">One-liner bio</label>
+          <textarea id="bio" name="bio" placeholder="DeFi builder. NFT collector. Building in public." rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="years">Years in crypto</label>
+          <input type="number" id="years" name="years" min="0" max="20" placeholder="3" />
+        </div>
+        <div class="form-group">
+          <label for="wallet">Wallet address</label>
+          <input type="text" id="wallet" name="wallet" class="mono" placeholder="0x..." />
+        </div>
+        <div class="form-group">
+          <label>Ecosystems</label>
+          <div class="ecosystems" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><input type="checkbox" name="eco" value="ETH" /> ETH</label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><input type="checkbox" name="eco" value="SOL" /> SOL</label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><input type="checkbox" name="eco" value="BTC" /> BTC</label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><input type="checkbox" name="eco" value="AVAX" /> AVAX</label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;"><input type="checkbox" name="eco" value="ARB" /> ARB</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Projects</label>
+          <div id="projects-list"></div>
+          <button type="button" class="btn-add" id="add-project">+ Add project</button>
+        </div>
+        <div class="form-group">
+          <label for="telegram">Telegram</label>
+          <input type="url" id="telegram" name="telegram" placeholder="https://t.me/..." />
+        </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/..." />
+        </div>
+        <div class="form-group">
+          <label for="twitter">Twitter / X</label>
+          <input type="url" id="twitter" name="twitter" placeholder="https://twitter.com/..." />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Generate my card</button>
+      </form>
+    </div>
+    <div class="create-preview-sticky">
+      <div class="glass-card">
+        <h3 style="margin-bottom: 16px; font-size: 1rem;">Preview</h3>
+        <div id="card-preview"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/create.js"></script>
+</body>
+</html>
